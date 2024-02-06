@@ -1,4 +1,4 @@
-# kotlin-based-android
+# News by Ryan
 ![Language](https://img.shields.io/github/languages/top/cortinico/kotlin-android-template?color=blue&logo=kotlin)
 
 A simple News Android App that uses API from https://newsapi.org/
