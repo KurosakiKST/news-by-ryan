@@ -6,14 +6,13 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.compose.material3.Scaffold
 import com.ryan.news.presentation.view.ui.component.SearchBar
+import com.ryan.news.presentation.view.ui.theme.NewsTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -21,13 +20,7 @@ fun HomeView(navHostController: NavHostController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = {
-                    Text(
-                        "Simple TopAppBar",
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                },
+                { SearchBar() },
                 actions = {
                     IconButton(onClick = { /* doSomething() */ }) {
                         Icon(
@@ -52,5 +45,7 @@ fun HomeView(navHostController: NavHostController) {
 @Preview(showBackground = true)
 @Composable
 fun HomePreview() {
+    NewsTheme {
 
+    }
 }
